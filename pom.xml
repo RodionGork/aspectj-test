@@ -5,7 +5,12 @@
     <groupId>none.rg</groupId>
     <artifactId>aspectj-test</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+    
+    <modules>
+        <module>aspectj-test-lib</module>
+        <module>aspectj-test-cod</module>
+    </modules>
 
     <name>aspectj-test</name>
     <url>http://maven.apache.org</url>
@@ -30,25 +35,4 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>aspectj-maven-plugin</artifactId>
-              <version>1.8</version>
-              <configuration>
-                <complianceLevel>1.8</complianceLevel>
-                <source>1.8</source>
-                <target>1.8</target>
-              </configuration>
-              <executions>
-                <execution>
-                  <goals>
-                    <goal>test-compile</goal>  <!-- use this goal to weave all your test classes -->
-                  </goals>
-                </execution>
-              </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>
